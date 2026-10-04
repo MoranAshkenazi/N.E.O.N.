@@ -1,0 +1,15 @@
+{
+  "name": "N.E.O.N. Tactical Agent",
+  "short_name": "N.E.O.N.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a14",
+  "theme_color": "#050a14",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

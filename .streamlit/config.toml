@@ -1,0 +1,19 @@
+[theme]
+base = "dark"
+primaryColor = "#00f3ff"
+backgroundColor = "#050a14"
+secondaryBackgroundColor = "#030f1d"
+textColor = "#cce7ff"
+font = "monospace"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
