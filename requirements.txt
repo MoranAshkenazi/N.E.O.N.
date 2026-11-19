@@ -1,0 +1,16 @@
+# Core runtime for the web version (Streamlit UI + FastAPI backend)
+fastapi
+uvicorn
+streamlit
+pydantic
+ollama
+python-dotenv
+requests
+beautifulsoup4
+ddgs
+edge-tts
+openpyxl
+pandas
+pypdf
+reportlab
+pillow
