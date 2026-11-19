@@ -30,11 +30,38 @@ N.E.O.N is equipped with a dynamic skill system that allows it to interact with 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.9+
-- Valid API keys for the LLM and search services (configured via a local `.env` file).
+- Python 3 (tested with 3.13)
+- [Ollama](https://ollama.com) running locally, with the default model downloaded:
+  ```bash
+  ollama pull qwen2.5:3b
+  ```
+- No paid API key is needed for the default setup. Web search uses DuckDuckGo. To use a different local model, set `OLLAMA_MODEL` (see [Configuration](#configuration)).
 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/MoranAshkenazi/N.E.O.N..git](https://github.com/MoranAshkenazi/N.E.O.N..git)
+   git clone https://github.com/MoranAshkenazi/N.E.O.N..git
    cd N.E.O.N.
+   ```
+2. Create a virtual environment and install the dependencies:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate        # Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+3. Start the web interface (Streamlit):
+   ```bash
+   python -m streamlit run app.py
+   ```
+   Then open the URL that Streamlit prints (by default http://localhost:8501).
+
+Optional:
+- **REST API:** `python server.py` starts FastAPI on port 8000. The `static/` folder is served from the current directory, so run the command from the project folder.
+- **Desktop window (Windows):** `pip install -r requirements-desktop.txt`, then `python desktop_runner.py`. `launch_neon.vbs` expects a virtual environment named `venv` in the project folder.
+
+### Configuration
+Create a `.env` file in the project folder (it is git-ignored). Supported variables:
+
+| Variable | Default | Description |
+|---|---|---|
+| `OLLAMA_MODEL` | `qwen2.5:3b` | Name of the local Ollama model the agent uses |

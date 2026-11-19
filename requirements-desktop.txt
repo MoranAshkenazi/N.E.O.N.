@@ -1,0 +1,3 @@
+# Extra packages for the Windows desktop window (desktop_app.py, desktop_runner.py)
+-r requirements.txt
+pywebview
